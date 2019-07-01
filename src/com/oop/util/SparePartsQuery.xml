@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Querys>
+
+	<!-- Create tables Query -->
+	<query id="create_tables">
+        <![CDATA[
+        	CREATE TABLE IF NOT EXISTS spare_part(
+				spare_part_id INT AUTO_INCREMENT,
+				price DECIMAL(7,2),
+				designation varchar(15),
+				available_count INT DEFAULT 0,
+				spare_part_type VARCHAR(10),
+				description VARCHAR(1000),
+				manufacture VARCHAR(30),
+				modelNo VARCHAR(20),
+				
+				screenSize VARCHAR(10),
+				technology VARCHAR(10),
+				
+				hddCapacity VARCHAR(10),
+				hddRPM VARCHAR(10),
+				
+				ramCapacity VARCHAR(10),
+				ramType VARCHAR(10),
+				
+				printerType VARCHAR(10),
+				sheetSize VARCHAR(10),
+				
+				voltage VARCHAR(10),
+				ampHour VARCHAR(10),
+				runtime VARCHAR(10),
+				
+				dvdWriterSpeed VARCHAR(10),
+				dvdWriterType VARCHAR(10),
+				
+				megaPixel VARCHAR(10),
+				
+				PRIMARY KEY (spare_part_id)
+			)
+        ]]>
+	</query>
+
+	<!-- price,designation,available_count,spare_part_type,description,manufacture,modelNo,   -->
+
+	<!-- insert HDD -->
+	<query id="insert_spare_part_hdd">
+        <![CDATA[
+          	insert into spare_part (price,designation,available_count,spare_part_type,description,manufacture,modelNo,hddCapacity,hddRPM) 
+          	values (?,?,?,?,?,?,?,?,?)
+        ]]>
+	</query>
+
+	<!-- insert monitor -->
+	<query id="insert_spare_part_monitor">
+        <![CDATA[
+          	insert into spare_part (price,designation,available_count,spare_part_type,description,manufacture,modelNo,screenSize,technology) 
+          	values (?,?,?,?,?,?,?,?,?)
+        ]]>
+	</query>	
+
+	<!-- insert RAM -->
+	<query id="insert_spare_part_ram">
+        <![CDATA[
+          	insert into spare_part (price,designation,available_count,spare_part_type,description,manufacture,modelNo,ramCapacity,ramType) 
+          	values (?,?,?,?,?,?,?,?,?)
+        ]]>
+	</query>	
+	
+	<!-- insert Printer -->
+	<query id="insert_spare_part_printer">
+        <![CDATA[
+          	insert into spare_part (price,designation,available_count,spare_part_type,description,manufacture,modelNo,printerType,sheetSize) 
+          	values (?,?,?,?,?,?,?,?,?)
+        ]]>
+	</query>
+	
+<!-- insert UPS -->
+	<query id="insert_spare_part_ups">
+        <![CDATA[
+          	insert into spare_part (price,designation,available_count,spare_part_type,description,manufacture,modelNo,voltage,ampHour,runtime) 
+          	values (?,?,?,?,?,?,?,?,?,?)
+        ]]>
+	</query>
+	
+	
+	<!-- insert DVD Writer -->
+	<query id="insert_spare_part_dvdwriter">
+        <![CDATA[
+          	insert into spare_part (price,designation,available_count,spare_part_type,description,manufacture,modelNo,dvdWriterSpeed,dvdWriterType) 
+          	values (?,?,?,?,?,?,?,?,?)
+        ]]>
+	</query>
+	
+	<!-- insert WebCam -->
+	<query id="insert_spare_part_webcam">
+        <![CDATA[
+          	insert into spare_part (price,designation,available_count,spare_part_type,description,manufacture,modelNo,megaPixel) 
+          	values (?,?,?,?,?,?,?,?)
+        ]]>
+	</query>
+	
+	
+	<!-- insert WebCam -->
+	<query id="update_spare_part">
+        <![CDATA[
+          	update spare_part set price=?,
+          	designation=?,
+          	available_count=?,
+          	description=?,
+          	manufacture=?,
+          	modelNo=?,
+          	hddCapacity=?,hddRPM=?,
+          	screenSize=?,technology=?,
+          	ramCapacity=?,ramType=?,
+          	printerType=?,sheetSize=?,
+          	voltage=?,ampHour=?,runtime=?,
+          	dvdWriterSpeed=?,dvdWriterType=?,
+          	megaPixel=?
+          	where spare_part_id = ?
+        ]]>
+	</query>
+	
+	<query id="searchSparepart">
+        <![CDATA[
+        	
+			SELECT *
+			FROM spare_part
+			WHERE spare_part_type like ? OR  description like ? OR manufacture like ? ;
+			
+        ]]>
+	</query>
+
+
+
+	<query id="delete_spare_part">
+        <![CDATA[
+
+			DELETE FROM spare_part
+			WHERE spare_part_id = ? ;
+        ]]>
+	</query>
+	
+	
+</Querys>

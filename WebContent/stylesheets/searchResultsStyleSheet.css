@@ -1,0 +1,22 @@
+.searchResultsBody {	 
+	background-image: url("../media/pictures/searchResults/searchResultsBackground.jpg");
+  	background-size: cover;
+}
+
+
+.searchResults-button{
+	background-color: #88aff9;
+	color: black;
+	padding: 8px 20px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 12px;
+  	border-radius: 8px;
+}
+
+.searchResults-button:hover{
+	 background-color: #5570fa;
+	 transform: scale(1.2, 1.2);
+	 transition: all .2s ease-in-out;
+}

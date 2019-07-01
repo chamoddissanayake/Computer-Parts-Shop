@@ -1,0 +1,23 @@
+.updateItemsBody{
+	background-image: url("../media/pictures/updateItems/updateItemsBackground.jpg");
+  	background-size: cover;
+  	
+}
+
+.update-button{
+	background-color: #88aff9;
+	color: black;
+	padding: 5px 10px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 12px;
+  	border-radius: 8px;
+	
+}
+
+.update-button:hover{
+	 background-color: #5570fa;
+	 transform: scale(1.15, 1.15);
+	 transition: all .2s ease-in-out;
+}

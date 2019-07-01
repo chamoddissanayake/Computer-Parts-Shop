@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Querys>
+
+	<!-- Create tables Query -->
+	<query id="create_feedback_tables">
+        <![CDATA[
+        	CREATE TABLE IF NOT EXISTS feedback(
+				feedback_id INT AUTO_INCREMENT,
+				customer_id VARCHAR(10),
+				feedback_topic VARCHAR(50),
+				description VARCHAR(1000),
+								
+				PRIMARY KEY (feedback_id)
+			)
+        ]]>
+	</query>
+	
+	
+	<!-- insert feedback -->
+	<query id="insert_feedback">
+        <![CDATA[
+          	insert into feedback (customer_id,feedback_topic,description) 
+          	values (?,?,?)
+        ]]>
+	</query>
+	
+	<!-- delete feedback -->
+	<query id="delete_feedback">
+        <![CDATA[
+          	
+          	DELETE FROM feedback
+			WHERE feedback_id = ? ;
+        ]]>
+	</query>
+	
+	
+	
+	<!-- search feedback -->
+	<query id="feedbackSearch">
+        <![CDATA[
+          	
+          	SELECT *
+			FROM feedback
+			WHERE feedback_id = ? ;
+       
+        ]]>
+	</query>
+	
+	updateFeedback
+
+	<!-- search feedback -->
+	<query id="updateFeedback">
+        <![CDATA[
+          	
+          	UPDATE feedback
+          	SET customer_id=?, feedback_topic=?,description=?
+          	WHERE feedback_id = ?
+        ]]>
+	</query>
+	
+</Querys>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>OOP Employee Web App</display-name>
+  <servlet>
+    <servlet-name>AddSparePartServlet</servlet-name>
+    <servlet-class>com.oop.servlet.AddSparePartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddFeedbackServlet</servlet-name>
+    <servlet-class>com.oop.servlet.AddFeedbackServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SearchServlet</servlet-name>
+    <servlet-class>com.oop.servlet.SearchServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteSparePartServlet</servlet-name>
+    <servlet-class>com.oop.servlet.DeleteSparePartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteFeedbackServlet</servlet-name>
+    <servlet-class>com.oop.servlet.DeleteFeedbackServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SearchFeedbackServlet</servlet-name>
+    <servlet-class>com.oop.servlet.SearchFeedbackServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SparePartUpdateServlet</servlet-name>
+    <servlet-class>com.oop.servlet.SparePartUpdateServlet</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>EditFeedbackServlet</servlet-name>
+    <servlet-class>com.oop.servlet.EditFeedbackServlet</servlet-class>
+  </servlet>
+  
+  
+  
+  
+  <servlet-mapping>
+    <servlet-name>AddSparePartServlet</servlet-name>
+    <url-pattern>/addSparePart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddFeedbackServlet</servlet-name>
+    <url-pattern>/addFeedback</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchServlet</servlet-name>
+    <url-pattern>/search</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteSparePartServlet</servlet-name>
+    <url-pattern>/deleteSparePart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteFeedbackServlet</servlet-name>
+    <url-pattern>/deleteFeedback</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchFeedbackServlet</servlet-name>
+    <url-pattern>/searchFeedback</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SparePartUpdateServlet</servlet-name>
+    <url-pattern>/updateSparePart</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>EditFeedbackServlet</servlet-name>
+    <url-pattern>/editFeedback</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,22 @@
+.indexBody {	 
+	background-image: url("../media/pictures/indexpage/background-index.jpg");
+  	background-size: cover;
+}
+
+#mainHeading {
+	  font-family: Apple Chancery, cursive;
+	  font-size: 35px;
+	  text-align: center;
+}
+
+#indexManageSparePartsTable{
+	width:260px; 
+	margin-left: 30px;
+	border: 2px solid black;
+	
+}
+			
+.userChoose:hover{
+	 transform: scale(1.2, 1.2);
+	 transition: all .6s ease-in-out;
+}
